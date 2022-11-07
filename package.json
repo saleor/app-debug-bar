@@ -23,7 +23,8 @@
     "storybook": "start-storybook -p 6006 --quiet",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "release": "pnpm release-it"
+    "release": "pnpm release-it",
+    "generate": "graphql-codegen"
   },
   "tsup": {
     "entry": [
@@ -119,7 +120,14 @@
     "release-it": "15.5.0",
     "ts-jest": "29.0.3",
     "tsup": "6.2.3",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "@graphql-codegen/cli": "^2.13.11",
+    "@graphql-codegen/typescript-graphql-request": "^4.5.8",
+    "tsup": "^6.4.0",
+    "typescript": "^4.8.4",
+    "@graphql-codegen/typescript-operations": "^2.5.6",
+    "@types/node": "^18.11.9",
+    "ts-node": "^10.9.1"
   },
   "peerDependencies": {
     "react": ">=17",
@@ -134,6 +142,9 @@
     "trim-newlines": ">=3.0.1"
   },
   "dependencies": {
-    "jotai": "^1.9.1"
+    "jotai": "^1.9.1",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.0.0",
+    "graphql-tag": "^2.12.6"
   }
 }
