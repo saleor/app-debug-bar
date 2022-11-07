@@ -2,7 +2,11 @@ import React, { HTMLAttributes } from "react";
 
 import { atom, useAtom } from "jotai";
 import { atomWithLocalStorage } from "./atom-with-persistence";
-import { AppBridge } from "@saleor/app-sdk/app-bridge";
+import {
+  AppBridge,
+  AppBridgeProvider,
+  useAppBridge,
+} from "@saleor/app-sdk/app-bridge";
 
 const openState = atom(false);
 
@@ -10,22 +14,21 @@ const FloatingIcon = (props: HTMLAttributes<HTMLButtonElement>) => (
   <button
     {...props}
     style={{
-      color: "white",
+      color: "red",
       position: "fixed",
       bottom: 20,
       right: 20,
       width: 50,
       height: 50,
       borderRadius: 50,
-      border: "1px solid #f4f4f4",
+      border: "1px solid red",
       background: "#f4f4f455",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
+      zIndex: 999,
     }}
-  >
-    icon
-  </button>
+  />
 );
 
 const Modal = () => {
@@ -50,15 +53,35 @@ type Props = {
   appBridge?: AppBridge;
 };
 
-export const AppDebugBar = (props: Props) => {
+const Bar = () => {
   const [open, setOpen] = useAtom(openState);
+  const { appBridgeState } = useAppBridge();
 
-  console.log(props.appBridge);
+  console.log(appBridgeState);
+
+  // check ready field, but its always false
+  if (!appBridgeState || !appBridgeState?.id) {
+    return (
+      <FloatingIcon onClick={() => setOpen((state: boolean) => !state)}>
+        Icon
+      </FloatingIcon>
+    );
+  }
 
   return (
     <>
-      <FloatingIcon onClick={() => setOpen((state: boolean) => !state)} />
+      <FloatingIcon onClick={() => setOpen((state: boolean) => !state)}>
+        Icon
+      </FloatingIcon>
       {open && <Modal />}
     </>
+  );
+};
+
+export const AppDebugBar = (props: Props) => {
+  return (
+    <AppBridgeProvider appBridgeInstance={props.appBridge}>
+      <Bar />
+    </AppBridgeProvider>
   );
 };
