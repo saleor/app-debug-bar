@@ -1,0 +1,37 @@
+query FetchWebhookData {
+  app {
+    id
+    manifestUrl
+    name
+    webhooks {
+      id
+      name
+      isActive
+      asyncEvents {
+        name
+        eventType
+      }
+      targetUrl
+      subscriptionQuery
+      eventDeliveries(first: 10) {
+        edges {
+          node {
+            createdAt
+            status
+            eventType
+            attempts(first: 1) {
+              edges {
+                node {
+                  createdAt
+                  response
+                  responseStatusCode
+                  status
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
