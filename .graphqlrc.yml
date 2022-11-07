@@ -1,0 +1,13 @@
+schema: graphql/schema.graphql
+documents: [graphql/**/*.graphql, src/**/*.ts, src/**/*.tsx]
+extensions:
+  codegen:
+    overwrite: true
+    generates:
+      generated/graphql.ts:
+        config:
+          dedupeFragments: true
+        plugins:
+          - typescript
+          - typescript-operations
+          - typescript-graphql-request
