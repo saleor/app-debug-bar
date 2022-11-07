@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes, useEffect, useState } from "react";
 
 import { atom, useAtom } from "jotai";
 import { atomWithLocalStorage } from "./atom-with-persistence";
@@ -7,6 +7,7 @@ import {
   AppBridgeProvider,
   useAppBridge,
 } from "@saleor/app-sdk/app-bridge";
+import { ButtonIIcon } from "./ButtonIIcon";
 
 const openState = atom(false);
 
@@ -42,6 +43,7 @@ const Modal = () => {
         width: 400,
         borderRadius: 5,
         padding: 20,
+        border: "1px solid red",
       }}
     >
       modal
@@ -61,17 +63,13 @@ const Bar = () => {
 
   // check ready field, but its always false
   if (!appBridgeState || !appBridgeState?.id) {
-    return (
-      <FloatingIcon onClick={() => setOpen((state: boolean) => !state)}>
-        Icon
-      </FloatingIcon>
-    );
+    return null;
   }
 
   return (
     <>
       <FloatingIcon onClick={() => setOpen((state: boolean) => !state)}>
-        Icon
+        <ButtonIIcon width="100%" height="100%" />
       </FloatingIcon>
       {open && <Modal />}
     </>
@@ -79,9 +77,15 @@ const Bar = () => {
 };
 
 export const AppDebugBar = (props: Props) => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <AppBridgeProvider appBridgeInstance={props.appBridge}>
-      <Bar />
+      {mounted && <Bar />}
     </AppBridgeProvider>
   );
 };
