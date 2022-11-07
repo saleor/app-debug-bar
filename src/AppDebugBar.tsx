@@ -15,14 +15,14 @@ const FloatingIcon = (props: HTMLAttributes<HTMLButtonElement>) => (
   <button
     {...props}
     style={{
-      color: "red",
+      color: "#056DFF",
       position: "fixed",
       bottom: 20,
       right: 20,
       width: 50,
       height: 50,
       borderRadius: 50,
-      border: "1px solid red",
+      border: "1px solid #056DFF",
       background: "#f4f4f455",
       display: "flex",
       justifyContent: "center",
@@ -43,8 +43,10 @@ const Modal = () => {
         width: 400,
         borderRadius: 5,
         padding: 20,
-        border: "1px solid red",
+        border: "1px solid #056DFF",
         maxHeight: "calc(100vh - 100px)",
+        zIndex: 999,
+        backdropFilter: "blur(5px)",
       }}
     >
       <h2>Failed webhooks history</h2>
