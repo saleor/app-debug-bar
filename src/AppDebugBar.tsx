@@ -89,10 +89,66 @@ const Bar = () => {
   const [open, setOpen] = useAtom(openState);
   const { appBridgeState } = useAppBridge();
 
+  console.log(appBridgeState);
+
   // check ready field, but its always false
   if (!appBridgeState || !appBridgeState?.id) {
     return null;
   }
+
+  fetch(`https://${appBridgeState?.domain}/graphql/`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `JWT ${appBridgeState?.token!}`,
+    },
+    body: JSON.stringify({
+      query: `
+        query FetchWebhookData($id: ID!){
+          app(id: $id){
+          id
+          manifestUrl
+          name
+          webhooks {
+            id
+            name
+            isActive
+            asyncEvents {
+              name
+              eventType
+            }
+            targetUrl
+            subscriptionQuery
+            eventDeliveries(first: 10) {
+              edges {
+                node {
+                  createdAt
+                  status
+                  eventType
+                  attempts(first: 1) {
+                    edges {
+                      node {
+                        createdAt
+                        response
+                        responseStatusCode
+                        status
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      `,
+      variables: {
+        id: appBridgeState?.id,
+      },
+    }),
+  })
+    .then((res) => res.json())
+    .then((result) => console.log(result));
 
   return (
     <>
