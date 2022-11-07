@@ -78,6 +78,7 @@
     "node": ">=14.0.0"
   },
   "devDependencies": {
+    "prettier": "^2.7.1",
     "@babel/core": "7.19.3",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",

@@ -45,6 +45,7 @@ specifiers:
   jest: 29.1.2
   jotai: ^1.9.1
   lint-staged: 13.0.3
+  prettier: ^2.7.1
   react: 18.2.0
   react-dom: 18.2.0
   react-test-renderer: 18.2.0
@@ -92,6 +93,7 @@ devDependencies:
   husky: 8.0.1
   jest: 29.1.2_@types+node@18.0.0
   lint-staged: 13.0.3
+  prettier: 2.7.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-test-renderer: 18.2.0_react@18.2.0
@@ -12556,6 +12558,12 @@ packages:
 
   /prettier/2.3.0:
     resolution: {integrity: sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
