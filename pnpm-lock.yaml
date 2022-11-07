@@ -28,7 +28,7 @@ specifiers:
   '@storybook/storybook-deployer': 2.8.12
   '@storybook/testing-library': 0.0.13
   '@types/jest': 29.1.2
-  '@types/node': ^18.11.9
+  '@types/node': 18.0.0
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   '@types/react-test-renderer': 18.0.0
@@ -52,6 +52,7 @@ specifiers:
   jest: 29.1.2
   jotai: ^1.9.1
   lint-staged: 13.0.3
+  next: ^13.0.2
   prettier: ^2.7.1
   react: 18.2.0
   react-dom: 18.2.0
@@ -60,7 +61,7 @@ specifiers:
   ts-jest: 29.0.3
   ts-node: ^10.9.1
   tsup: ^6.4.0
-  typescript: ^4.8.4
+  typescript: 4.8.4
 
 dependencies:
   graphql: 16.6.0
@@ -72,12 +73,12 @@ devDependencies:
   '@babel/core': 7.19.3
   '@commitlint/cli': 17.1.2
   '@commitlint/config-conventional': 17.1.0
-  '@graphql-codegen/cli': 2.13.11_5r3mmcyz2qxsj6cwjz753kl35e
+  '@graphql-codegen/cli': 2.13.11_72hnxqabbj76e5mdlzxljrub54
   '@graphql-codegen/typescript-graphql-request': 4.5.8_vxjna5bwgkgoztnbq3trofjfwq
   '@graphql-codegen/typescript-operations': 2.5.6_graphql@16.6.0
   '@ryansonshine/commitizen': 4.2.8
   '@ryansonshine/cz-conventional-changelog': 3.3.4
-  '@saleor/app-sdk': 0.19.0_biqbaboplfbrettd7655fr4n2y
+  '@saleor/app-sdk': 0.19.0_pknogjuzx4bv7zxtatcb2ahtsq
   '@storybook/addon-actions': 6.5.12_biqbaboplfbrettd7655fr4n2y
   '@storybook/addon-essentials': 6.5.12_rlodfteladytaz2lnqidnrt4b4
   '@storybook/addon-interactions': 6.5.12_26equvtduyjy6o3gsvcrrvq4oy
@@ -88,7 +89,7 @@ devDependencies:
   '@storybook/storybook-deployer': 2.8.12
   '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
   '@types/jest': 29.1.2
-  '@types/node': 18.11.9
+  '@types/node': 18.0.0
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   '@types/react-test-renderer': 18.0.0
@@ -106,15 +107,16 @@ devDependencies:
   eslint-plugin-typescript-sort-keys: 2.1.0_xyciw6oqjoiiono4dhv3uhn5my
   eslint-plugin-unused-imports: 2.0.0_huv4zm33phu4g26wxzquk6xtfu
   husky: 8.0.1
-  jest: 29.1.2_odkjkoia5xunhxkdrka32ib6vi
+  jest: 29.1.2_g3ob4elhesv7uyo2jbxkqs7hje
   lint-staged: 13.0.3
+  next: 13.0.2_6tziyx3dehkoeijunclpkpolha
   prettier: 2.7.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-test-renderer: 18.2.0_react@18.2.0
   release-it: 15.5.0
   ts-jest: 29.0.3_jxje2hcbylcap4trrcwjnopnr4
-  ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
+  ts-node: 10.9.1_wmbf3mkjp5cwm6a5d7gw6hcyui
   tsup: 6.4.0_mwhvu7sfp6vq5ryuwb6hlbjfka
   typescript: 4.8.4
 
@@ -1909,7 +1911,7 @@ packages:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: true
 
-  /@graphql-codegen/cli/2.13.11_5r3mmcyz2qxsj6cwjz753kl35e:
+  /@graphql-codegen/cli/2.13.11_72hnxqabbj76e5mdlzxljrub54:
     resolution: {integrity: sha512-PJF36a1i6M7Btj1kB4PWWzBUO3u2BJzsd/6KXxRmEugcxrbaCnbTDDktopy0CZYKdqaFbXaowwbRY8Tk8DV99Q==}
     hasBin: true
     peerDependencies:
@@ -1927,19 +1929,19 @@ packages:
       '@graphql-tools/graphql-file-loader': 7.5.10_graphql@16.6.0
       '@graphql-tools/json-file-loader': 7.4.11_graphql@16.6.0
       '@graphql-tools/load': 7.8.0_graphql@16.6.0
-      '@graphql-tools/prisma-loader': 7.2.32_xfoe4adolgvm4tvnio5xigcr6e
-      '@graphql-tools/url-loader': 7.16.12_xfoe4adolgvm4tvnio5xigcr6e
+      '@graphql-tools/prisma-loader': 7.2.32_uldfu4acmv6fd2e3rcsvb652bq
+      '@graphql-tools/url-loader': 7.16.12_uldfu4acmv6fd2e3rcsvb652bq
       '@graphql-tools/utils': 8.13.1_graphql@16.6.0
       '@whatwg-node/fetch': 0.3.2
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       chokidar: 3.5.3
       cosmiconfig: 7.0.1
-      cosmiconfig-typescript-loader: 4.1.1_mzjwejph7gmlzf3uxmy5cdhfrq
+      cosmiconfig-typescript-loader: 4.1.1_ifueloqfgvo5ek3icd6n6traxu
       debounce: 1.2.1
       detect-indent: 6.1.0
       graphql: 16.6.0
-      graphql-config: 4.3.6_kga5uvzcguewallfw6awyvcvpe
+      graphql-config: 4.3.6_2ttg26o7j4jsbrhrlssuyvocia
       inquirer: 8.2.5
       is-glob: 4.0.3
       json-to-pretty-yaml: 1.2.2
@@ -2267,12 +2269,12 @@ packages:
       tslib: 2.4.1
     dev: true
 
-  /@graphql-tools/prisma-loader/7.2.32_xfoe4adolgvm4tvnio5xigcr6e:
+  /@graphql-tools/prisma-loader/7.2.32_uldfu4acmv6fd2e3rcsvb652bq:
     resolution: {integrity: sha512-LCAEGtyjzuIUtR8Fua/YsQQZdK1qJhelIMn5weQ5s1R27utDwxYr36YmZkhU0cEQV6JMmXQnnSet+0hTm5sa9w==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
     dependencies:
-      '@graphql-tools/url-loader': 7.16.12_xfoe4adolgvm4tvnio5xigcr6e
+      '@graphql-tools/url-loader': 7.16.12_uldfu4acmv6fd2e3rcsvb652bq
       '@graphql-tools/utils': 9.1.0_graphql@16.6.0
       '@types/js-yaml': 4.0.5
       '@types/json-stable-stringify': 1.0.34
@@ -2338,7 +2340,7 @@ packages:
       value-or-promise: 1.0.11
     dev: true
 
-  /@graphql-tools/url-loader/7.16.12_xfoe4adolgvm4tvnio5xigcr6e:
+  /@graphql-tools/url-loader/7.16.12_uldfu4acmv6fd2e3rcsvb652bq:
     resolution: {integrity: sha512-A+T10Co1+6zHoBrmpbJte9o/x6YgIEiiMbyByFAfRU9kDCQdz0c/YJI9NNWsvKLBHh8zaTRp/ZYk/HpJ0hVOxw==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
@@ -2354,7 +2356,7 @@ packages:
       graphql: 16.6.0
       graphql-ws: 5.11.2_graphql@16.6.0
       isomorphic-ws: 5.0.0_ws@8.11.0
-      meros: 1.2.1_@types+node@18.11.9
+      meros: 1.2.1_@types+node@18.0.0
       tslib: 2.4.1
       value-or-promise: 1.0.11
       ws: 8.11.0
@@ -2815,6 +2817,127 @@ packages:
       glob-to-regexp: 0.3.0
     dev: true
 
+  /@next/env/13.0.2:
+    resolution: {integrity: sha512-Qb6WPuRriGIQ19qd6NBxpcrFOfj8ziN7l9eZUfwff5gl4zLXluqtuZPddYZM/oWjN53ZYcuRXzL+oowKyJeYtA==}
+    dev: true
+
+  /@next/swc-android-arm-eabi/13.0.2:
+    resolution: {integrity: sha512-X54UQCTFyOGnJP//Z71dPPlp4BCYcQL2ncikKXQcPzVpqPs4C3m+tKC8ivBNH6edAXkppwsLRz1/yQwgSZ9Swg==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-android-arm64/13.0.2:
+    resolution: {integrity: sha512-1P00Kv8uKaLubqo7JzPrTqgFAzSOmfb8iwqJrOb9in5IvTRtNGlkR4hU0sXzqbQNM/+SaYxze6Z5ry1IDyb/cQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-darwin-arm64/13.0.2:
+    resolution: {integrity: sha512-1zGIOkInkOLRv0QQGZ+3wffYsyKI4vIy62LYTvDWUn7TAYqnmXwougp9NSLqDeagLwgsv2URrykyAFixA/YqxA==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-darwin-x64/13.0.2:
+    resolution: {integrity: sha512-ECDAjoMP1Y90cARaelS6X+k6BQx+MikAYJ8f/eaJrLur44NIOYc9HA/dgcTp5jenguY4yT8V+HCquLjAVle6fA==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-freebsd-x64/13.0.2:
+    resolution: {integrity: sha512-2DcL/ofQdBnQX3IoI9sjlIAyLCD1oZoUBuhrhWbejvBQjutWrI0JTEv9uG69WcxWhVMm3BCsjv8GK2/68OKp7A==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-linux-arm-gnueabihf/13.0.2:
+    resolution: {integrity: sha512-Y3OQF1CSBSWW2vGkmvOIuOUNqOq8qX7f1ZpcKUVWP3/Uq++DZmVi9d18lgnSe1I3QFqc+nXWyun9ljsN83j0sw==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-linux-arm64-gnu/13.0.2:
+    resolution: {integrity: sha512-mNyzwsFF6kwZYEjnGicx9ksDZYEZvyzEc1BtCu8vdZi/v8UeixQwCiAT6FyYX9uxMPEkzk8qiU0t0u9gvltsKw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-linux-arm64-musl/13.0.2:
+    resolution: {integrity: sha512-M6SdYjWgRrY3tJBxz0663zCRPTu5BRONmxlftKWWHv9LjAJ59neTLaGj4rp0A08DkJglZIoCkLOzLrzST6TGag==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-linux-x64-gnu/13.0.2:
+    resolution: {integrity: sha512-pi63RoxvG4ES1KS06Zpm0MATVIXTs/TIbLbdckeLoM40u1d3mQl/+hSSrLRSxzc2OtyL8fh92sM4gkJrQXAMAw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-linux-x64-musl/13.0.2:
+    resolution: {integrity: sha512-9Pv91gfYnDONgjtRm78n64b/c54+azeHtlnqBLTnIFWSMBDRl1/WDkhKWIj3fBGPLimtK7Tko3ULR3og9RRUPw==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-win32-arm64-msvc/13.0.2:
+    resolution: {integrity: sha512-Nvewe6YZaizAkGHHprbMkYqQulBjZCHKBGKeFPwoPtOA+a2Qi4pZzc/qXFyC5/2A6Z0mr2U1zg9rd04WBYMwBw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-win32-ia32-msvc/13.0.2:
+    resolution: {integrity: sha512-ZUBYGZw5G3QrqDpRq1EWi3aHmvPZM8ijK5TFL6UbH16cYQ0JpANmuG2P66KB93Qe/lWWzbeAZk/tj1XqwoCuPA==}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@next/swc-win32-x64-msvc/13.0.2:
+    resolution: {integrity: sha512-fA9uW1dm7C0mEYGcKlbmLcVm2sKcye+1kPxh2cM4jVR+kQQMtHWsjIzeSpe2grQLSDan06z4n6hbr8b1c3hA8w==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -3108,7 +3231,7 @@ packages:
       - '@swc/wasm'
     dev: true
 
-  /@saleor/app-sdk/0.19.0_biqbaboplfbrettd7655fr4n2y:
+  /@saleor/app-sdk/0.19.0_pknogjuzx4bv7zxtatcb2ahtsq:
     resolution: {integrity: sha512-/i7ysFjwfkjP7PFFY8iF4UA4bpWnGNNh7jjYSKycEJE1SPCVMPK6fDOMj23K8wM//GCBlzisBzuY8su+tTwEJA==}
     peerDependencies:
       next: ^12
@@ -3119,6 +3242,7 @@ packages:
       fast-glob: 3.2.12
       graphql: 16.6.0
       jose: 4.10.4
+      next: 13.0.2_6tziyx3dehkoeijunclpkpolha
       node-fetch: 2.6.7
       raw-body: 2.5.1
       react: 18.2.0
@@ -4703,6 +4827,12 @@ packages:
       resolve-from: 5.0.0
     dev: true
 
+  /@swc/helpers/0.4.11:
+    resolution: {integrity: sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw==}
+    dependencies:
+      tslib: 2.4.1
+    dev: true
+
   /@szmarczak/http-timer/5.0.1:
     resolution: {integrity: sha512-+PmQX0PiAYPMeVYe237LJAYvOMYW1j2rH5YROyS3b4CTVJum34HfRvKvAzozHAQG0TnHNdUfY9nCeUyRAs//cw==}
     engines: {node: '>=14.16'}
@@ -4929,6 +5059,10 @@ packages:
 
   /@types/node/16.18.3:
     resolution: {integrity: sha512-jh6m0QUhIRcZpNv7Z/rpN+ZWXOicUUQbSoWks7Htkbb9IjFQj4kzcX/xFCkjstCj5flMsN8FiSvt+q+Tcs4Llg==}
+    dev: true
+
+  /@types/node/18.0.0:
+    resolution: {integrity: sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==}
     dev: true
 
   /@types/node/18.11.9:
@@ -7089,6 +7223,10 @@ packages:
     engines: {node: '>= 12'}
     dev: true
 
+  /client-only/0.0.1:
+    resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: true
+
   /cliui/6.0.0:
     resolution: {integrity: sha512-t6wbgtoCXvAzst7QgXxJYqPt0usEfbgQdftEPbLL/cvv6HPE5VgvqCuAIDR0NgU52ds6rFwqrgakNLrHEjCbrQ==}
     dependencies:
@@ -7442,7 +7580,7 @@ packages:
       '@iarna/toml': 2.2.5
     dev: true
 
-  /cosmiconfig-typescript-loader/4.1.1_mzjwejph7gmlzf3uxmy5cdhfrq:
+  /cosmiconfig-typescript-loader/4.1.1_ifueloqfgvo5ek3icd6n6traxu:
     resolution: {integrity: sha512-9DHpa379Gp0o0Zefii35fcmuuin6q92FnLDffzdZ0l9tVd3nEobG3O+MZ06+kuBvFTSVScvNb/oHA13Nd4iipg==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -7451,9 +7589,9 @@ packages:
       ts-node: '>=10'
       typescript: '>=3'
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.0.0
       cosmiconfig: 7.0.1
-      ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
+      ts-node: 10.9.1_wmbf3mkjp5cwm6a5d7gw6hcyui
       typescript: 4.8.4
     dev: true
 
@@ -7472,7 +7610,7 @@ packages:
       typescript: 4.8.4
     dev: true
 
-  /cosmiconfig-typescript-loader/4.2.0_mzjwejph7gmlzf3uxmy5cdhfrq:
+  /cosmiconfig-typescript-loader/4.2.0_ifueloqfgvo5ek3icd6n6traxu:
     resolution: {integrity: sha512-NkANeMnaHrlaSSlpKGyvn2R4rqUDeE/9E5YHx+b4nwo0R8dZyAqcih8/gxpCZvqWP9Vf6xuLpMSzSgdVEIM78g==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -7481,9 +7619,9 @@ packages:
       ts-node: '>=10'
       typescript: '>=3'
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.0.0
       cosmiconfig: 7.0.1
-      ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
+      ts-node: 10.9.1_wmbf3mkjp5cwm6a5d7gw6hcyui
       typescript: 4.8.4
     dev: true
 
@@ -9956,7 +10094,7 @@ packages:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
 
-  /graphql-config/4.3.6_kga5uvzcguewallfw6awyvcvpe:
+  /graphql-config/4.3.6_2ttg26o7j4jsbrhrlssuyvocia:
     resolution: {integrity: sha512-i7mAPwc0LAZPnYu2bI8B6yXU5820Wy/ArvmOseDLZIu0OU1UTULEuexHo6ZcHXeT9NvGGaUPQZm8NV3z79YydA==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -9966,15 +10104,15 @@ packages:
       '@graphql-tools/json-file-loader': 7.4.11_graphql@16.6.0
       '@graphql-tools/load': 7.8.0_graphql@16.6.0
       '@graphql-tools/merge': 8.3.11_graphql@16.6.0
-      '@graphql-tools/url-loader': 7.16.12_xfoe4adolgvm4tvnio5xigcr6e
+      '@graphql-tools/url-loader': 7.16.12_uldfu4acmv6fd2e3rcsvb652bq
       '@graphql-tools/utils': 8.13.1_graphql@16.6.0
       cosmiconfig: 7.0.1
       cosmiconfig-toml-loader: 1.0.0
-      cosmiconfig-typescript-loader: 4.2.0_mzjwejph7gmlzf3uxmy5cdhfrq
+      cosmiconfig-typescript-loader: 4.2.0_ifueloqfgvo5ek3icd6n6traxu
       graphql: 16.6.0
       minimatch: 4.2.1
       string-env-interpolation: 1.0.1
-      ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
+      ts-node: 10.9.1_wmbf3mkjp5cwm6a5d7gw6hcyui
       tslib: 2.4.1
     transitivePeerDependencies:
       - '@swc/core'
@@ -11241,7 +11379,7 @@ packages:
       - supports-color
     dev: true
 
-  /jest-cli/29.3.0_odkjkoia5xunhxkdrka32ib6vi:
+  /jest-cli/29.3.0_g3ob4elhesv7uyo2jbxkqs7hje:
     resolution: {integrity: sha512-rDb9iasZvqTkgrlwzVGemR5i20T0/XN1ug46Ch2vxTRa0zS5PHaVXQXYzYbuLFHs1xpc+XsB9xPfEkkwbnLJBg==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -11258,7 +11396,7 @@ packages:
       exit: 0.1.2
       graceful-fs: 4.2.10
       import-local: 3.1.0
-      jest-config: 29.3.0_odkjkoia5xunhxkdrka32ib6vi
+      jest-config: 29.3.0_g3ob4elhesv7uyo2jbxkqs7hje
       jest-util: 29.2.1
       jest-validate: 29.2.2
       prompts: 2.4.2
@@ -11267,6 +11405,46 @@ packages:
       - '@types/node'
       - supports-color
       - ts-node
+    dev: true
+
+  /jest-config/29.3.0_g3ob4elhesv7uyo2jbxkqs7hje:
+    resolution: {integrity: sha512-sTSDs/M+//njznsytxiBxwfDnSWRb6OqiNSlO/B2iw1HUaa1YLsdWmV4AWLXss1XKzv1F0yVK+kA4XOhZ0I1qQ==}
+    engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+    peerDependencies:
+      '@types/node': '*'
+      ts-node: '>=9.0.0'
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      ts-node:
+        optional: true
+    dependencies:
+      '@babel/core': 7.19.3
+      '@jest/test-sequencer': 29.3.0
+      '@jest/types': 29.2.1
+      '@types/node': 18.0.0
+      babel-jest: 29.3.0_@babel+core@7.19.3
+      chalk: 4.1.2
+      ci-info: 3.5.0
+      deepmerge: 4.2.2
+      glob: 7.2.3
+      graceful-fs: 4.2.10
+      jest-circus: 29.3.0
+      jest-environment-node: 29.3.0
+      jest-get-type: 29.2.0
+      jest-regex-util: 29.2.0
+      jest-resolve: 29.3.0
+      jest-runner: 29.3.0
+      jest-util: 29.2.1
+      jest-validate: 29.2.2
+      micromatch: 4.0.5
+      parse-json: 5.2.0
+      pretty-format: 29.2.1
+      slash: 3.0.0
+      strip-json-comments: 3.1.1
+      ts-node: 10.9.1_wmbf3mkjp5cwm6a5d7gw6hcyui
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /jest-config/29.3.0_odkjkoia5xunhxkdrka32ib6vi:
@@ -11304,7 +11482,7 @@ packages:
       pretty-format: 29.2.1
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
+      ts-node: 10.9.1_wmbf3mkjp5cwm6a5d7gw6hcyui
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -11670,7 +11848,7 @@ packages:
       supports-color: 8.1.1
     dev: true
 
-  /jest/29.1.2_odkjkoia5xunhxkdrka32ib6vi:
+  /jest/29.1.2_g3ob4elhesv7uyo2jbxkqs7hje:
     resolution: {integrity: sha512-5wEIPpCezgORnqf+rCaYD1SK+mNN7NsstWzIsuvsnrhR/hSxXWd82oI7DkrbJ+XTD28/eG8SmxdGvukrGGK6Tw==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
@@ -11683,7 +11861,7 @@ packages:
       '@jest/core': 29.3.0_ts-node@10.9.1
       '@jest/types': 29.2.1
       import-local: 3.1.0
-      jest-cli: 29.3.0_odkjkoia5xunhxkdrka32ib6vi
+      jest-cli: 29.3.0_g3ob4elhesv7uyo2jbxkqs7hje
     transitivePeerDependencies:
       - '@types/node'
       - supports-color
@@ -12441,7 +12619,7 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /meros/1.2.1_@types+node@18.11.9:
+  /meros/1.2.1_@types+node@18.0.0:
     resolution: {integrity: sha512-R2f/jxYqCAGI19KhAvaxSOxALBMkaXWH2a7rOyqQw+ZmizX5bKkEYWLzdhC+U82ZVVPVp6MCXe3EkVligh+12g==}
     engines: {node: '>=13'}
     peerDependencies:
@@ -12450,7 +12628,7 @@ packages:
       '@types/node':
         optional: true
     dependencies:
-      '@types/node': 18.11.9
+      '@types/node': 18.0.0
     dev: true
 
   /methods/1.1.2:
@@ -12763,6 +12941,51 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       type-fest: 2.19.0
+    dev: true
+
+  /next/13.0.2_6tziyx3dehkoeijunclpkpolha:
+    resolution: {integrity: sha512-uQ5z5e4D9mOe8+upy6bQdYYjo/kk1v3jMW87kTy2TgAyAsEO+CkwRnMgyZ4JoHEnhPZLHwh7dk0XymRNLe1gFw==}
+    engines: {node: '>=14.6.0'}
+    hasBin: true
+    peerDependencies:
+      fibers: '>= 3.1.0'
+      node-sass: ^6.0.0 || ^7.0.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+      sass: ^1.3.0
+    peerDependenciesMeta:
+      fibers:
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+    dependencies:
+      '@next/env': 13.0.2
+      '@swc/helpers': 0.4.11
+      caniuse-lite: 1.0.30001431
+      postcss: 8.4.14
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      styled-jsx: 5.1.0_b6k74wvxdvqypha4emuv7fd2ke
+      use-sync-external-store: 1.2.0_react@18.2.0
+    optionalDependencies:
+      '@next/swc-android-arm-eabi': 13.0.2
+      '@next/swc-android-arm64': 13.0.2
+      '@next/swc-darwin-arm64': 13.0.2
+      '@next/swc-darwin-x64': 13.0.2
+      '@next/swc-freebsd-x64': 13.0.2
+      '@next/swc-linux-arm-gnueabihf': 13.0.2
+      '@next/swc-linux-arm64-gnu': 13.0.2
+      '@next/swc-linux-arm64-musl': 13.0.2
+      '@next/swc-linux-x64-gnu': 13.0.2
+      '@next/swc-linux-x64-musl': 13.0.2
+      '@next/swc-win32-arm64-msvc': 13.0.2
+      '@next/swc-win32-ia32-msvc': 13.0.2
+      '@next/swc-win32-x64-msvc': 13.0.2
+    transitivePeerDependencies:
+      - '@babel/core'
+      - babel-plugin-macros
     dev: true
 
   /nice-try/1.0.5:
@@ -13631,7 +13854,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 2.0.6
-      ts-node: 10.9.1_cbe7ovvae6zqfnmtgctpgpys54
+      ts-node: 10.9.1_wmbf3mkjp5cwm6a5d7gw6hcyui
       yaml: 1.10.2
     dev: true
 
@@ -13742,6 +13965,15 @@ packages:
     dependencies:
       picocolors: 0.2.1
       source-map: 0.6.1
+    dev: true
+
+  /postcss/8.4.14:
+    resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.4
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
     dev: true
 
   /postcss/8.4.18:
@@ -15550,6 +15782,24 @@ packages:
       inline-style-parser: 0.1.1
     dev: true
 
+  /styled-jsx/5.1.0_b6k74wvxdvqypha4emuv7fd2ke:
+    resolution: {integrity: sha512-/iHaRJt9U7T+5tp6TRelLnqBqiaIT0HsO0+vgyj8hK2KUk7aejFqRrumqPUlAqDwAj8IbS/1hk3IhBAAK/FCUQ==}
+    engines: {node: '>= 12.0.0'}
+    peerDependencies:
+      '@babel/core': '*'
+      babel-plugin-macros: '*'
+      react: '>= 16.8.0 || 17.x.x || ^18.0.0-0'
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      babel-plugin-macros:
+        optional: true
+    dependencies:
+      '@babel/core': 7.19.3
+      client-only: 0.0.1
+      react: 18.2.0
+    dev: true
+
   /sucrase/3.28.0:
     resolution: {integrity: sha512-TK9600YInjuiIhVM3729rH4ZKPOsGeyXUwY+Ugu9eilNbdTFyHr6XcAGYbRVZPDgWj6tgI7bx95aaJjHnbffag==}
     engines: {node: '>=8'}
@@ -15897,7 +16147,7 @@ packages:
       '@babel/core': 7.19.3
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
-      jest: 29.1.2_odkjkoia5xunhxkdrka32ib6vi
+      jest: 29.1.2_g3ob4elhesv7uyo2jbxkqs7hje
       jest-util: 29.2.1
       json5: 2.2.1
       lodash.memoize: 4.1.2
@@ -15911,7 +16161,7 @@ packages:
     resolution: {integrity: sha512-PGcnJoTBnVGy6yYNFxWVNkdcAuAMstvutN9MgDJIV6L0oG8fB+ZNNy1T+wJzah8RPGor1mZuPQkVfXNDpy9eHA==}
     dev: true
 
-  /ts-node/10.9.1_cbe7ovvae6zqfnmtgctpgpys54:
+  /ts-node/10.9.1_wmbf3mkjp5cwm6a5d7gw6hcyui:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -15930,7 +16180,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.3
-      '@types/node': 18.11.9
+      '@types/node': 18.0.0
       acorn: 8.8.1
       acorn-walk: 8.2.0
       arg: 4.1.3
@@ -16414,6 +16664,14 @@ packages:
     dependencies:
       punycode: 1.3.2
       querystring: 0.2.0
+    dev: true
+
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: true
 
   /use/3.1.1:

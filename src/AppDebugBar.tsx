@@ -1,13 +1,13 @@
 import React, { HTMLAttributes, useEffect, useState } from "react";
 
 import { atom, useAtom } from "jotai";
-import { atomWithLocalStorage } from "./atom-with-persistence";
 import {
   AppBridge,
   AppBridgeProvider,
   useAppBridge,
 } from "@saleor/app-sdk/app-bridge";
 import { ButtonIIcon } from "./ButtonIIcon";
+import { WebhookFailedInvocationsList } from "./WebhookFailedInvocationsList";
 
 const openState = atom(false);
 
@@ -44,9 +44,39 @@ const Modal = () => {
         borderRadius: 5,
         padding: 20,
         border: "1px solid red",
+        maxHeight: "calc(100vh - 100px)",
       }}
     >
-      modal
+      <h2>Failed webhooks history</h2>
+      <WebhookFailedInvocationsList
+        webhooks={[
+          {
+            event: "ORDER_CREATED",
+            invocations: [
+              {
+                timestamp: new Date().toISOString(),
+                status: "FAILED",
+                code: 404,
+              },
+            ],
+          },
+          {
+            event: "ORDER_FULFILLED",
+            invocations: [
+              {
+                timestamp: new Date().toISOString(),
+                status: "FAILED",
+                code: 405,
+              },
+              {
+                timestamp: new Date().toISOString(),
+                status: "FAILED",
+                code: 400,
+              },
+            ],
+          },
+        ]}
+      />
     </div>
   );
 };
@@ -58,8 +88,6 @@ type Props = {
 const Bar = () => {
   const [open, setOpen] = useAtom(openState);
   const { appBridgeState } = useAppBridge();
-
-  console.log(appBridgeState);
 
   // check ready field, but its always false
   if (!appBridgeState || !appBridgeState?.id) {
