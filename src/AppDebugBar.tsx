@@ -1,6 +1,8 @@
 import React, { HTMLAttributes } from "react";
 
 import { atom, useAtom } from "jotai";
+import { atomWithLocalStorage } from "./atom-with-persistence";
+import { AppBridge } from "@saleor/app-sdk/app-bridge";
 
 const openState = atom(false);
 
@@ -45,15 +47,17 @@ const Modal = () => {
 };
 
 type Props = {
-  aplApiUrl: string;
+  appBridge?: AppBridge;
 };
 
 export const AppDebugBar = (props: Props) => {
   const [open, setOpen] = useAtom(openState);
 
+  console.log(props.appBridge);
+
   return (
     <>
-      <FloatingIcon onClick={() => setOpen((state) => !state)} />
+      <FloatingIcon onClick={() => setOpen((state: boolean) => !state)} />
       {open && <Modal />}
     </>
   );
