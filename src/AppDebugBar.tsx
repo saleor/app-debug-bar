@@ -32,7 +32,8 @@ const FloatingIcon = (props: HTMLAttributes<HTMLButtonElement>) => (
   />
 );
 
-const Modal = () => {
+const Modal = (props: { data: any }) => {
+  console.log(props);
   return (
     <div
       style={{
@@ -50,35 +51,7 @@ const Modal = () => {
       }}
     >
       <h2>Failed webhooks history</h2>
-      <WebhookFailedInvocationsList
-        webhooks={[
-          {
-            event: "ORDER_CREATED",
-            invocations: [
-              {
-                timestamp: new Date().toISOString(),
-                status: "FAILED",
-                code: 404,
-              },
-            ],
-          },
-          {
-            event: "ORDER_FULFILLED",
-            invocations: [
-              {
-                timestamp: new Date().toISOString(),
-                status: "FAILED",
-                code: 405,
-              },
-              {
-                timestamp: new Date().toISOString(),
-                status: "FAILED",
-                code: 400,
-              },
-            ],
-          },
-        ]}
-      />
+      <WebhookFailedInvocationsList webhooks={[]} />
     </div>
   );
 };
@@ -90,22 +63,21 @@ type Props = {
 const Bar = () => {
   const [open, setOpen] = useAtom(openState);
   const { appBridgeState } = useAppBridge();
+  const [data, setData] = useState<any>(null);
 
-  console.log(appBridgeState);
+  useEffect(() => {
+    if (!appBridgeState?.domain) {
+      return;
+    }
 
-  // check ready field, but its always false
-  if (!appBridgeState || !appBridgeState?.id) {
-    return null;
-  }
-
-  fetch(`https://${appBridgeState?.domain}/graphql/`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `JWT ${appBridgeState?.token!}`,
-    },
-    body: JSON.stringify({
-      query: `
+    fetch(`https://${appBridgeState?.domain}/graphql/`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `JWT ${appBridgeState?.token!}`,
+      },
+      body: JSON.stringify({
+        query: `
         query FetchWebhookData($id: ID!){
           app(id: $id){
           id
@@ -144,20 +116,26 @@ const Bar = () => {
         }
       }
       `,
-      variables: {
-        id: appBridgeState?.id,
-      },
-    }),
-  })
-    .then((res) => res.json())
-    .then((result) => console.log(result));
+        variables: {
+          id: appBridgeState?.id,
+        },
+      }),
+    })
+      .then((res) => res.json())
+      .then((result) => setData(result));
+  }, [appBridgeState?.domain]);
+
+  // check ready field, but its always false
+  if (!appBridgeState || !appBridgeState?.id) {
+    return null;
+  }
 
   return (
     <>
       <FloatingIcon onClick={() => setOpen((state: boolean) => !state)}>
         <ButtonIIcon width="100%" height="100%" />
       </FloatingIcon>
-      {open && <Modal />}
+      {open && <Modal data={data} />}
     </>
   );
 };
